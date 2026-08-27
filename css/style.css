@@ -44,7 +44,7 @@ header h1 {
   font-size: 1.4rem;
 }
 
-/* FORZAR MENÚ HORIZONTAL SIEMPRE */
+/* MENÚ HORIZONTAL Y TEXTO BLANCO */
 nav.menu-horizontal {
   display: flex !important;
   flex-direction: row !important;
@@ -55,18 +55,22 @@ nav.menu-horizontal {
   margin: 0 auto !important;
 }
 
-nav.menu-horizontal a {
-  color: white !important;
+/* ENLACES EN BLANCO SIN SUBRAYADO AZUL */
+nav.menu-horizontal a,
+nav.menu-horizontal a:visited,
+nav.menu-horizontal a:active {
+  color: #ffffff !important;
   text-decoration: none !important;
   font-weight: bold !important;
   font-size: 0.85rem !important;
-  display: inline !important;
+  display: inline-block !important;
   white-space: nowrap !important;
   margin: 0 !important;
 }
 
 nav.menu-horizontal a:hover {
   text-decoration: underline !important;
+  color: #f2e8d5 !important;
 }
 
 /* SECCIONES Y CONTENIDO */
