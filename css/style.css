@@ -36,7 +36,7 @@ header {
 }
 
 .logo {
-  width: 120px; /* Tamaño adaptado para pantallas estándar */
+  width: 120px;
   height: auto;
   mix-blend-mode: multiply;
   object-fit: contain;
@@ -47,11 +47,20 @@ header h1 {
   margin: 0;
 }
 
+/* MENÚ EN NAVEGACIÓN VERTICAL */
+nav {
+  display: flex;
+  flex-direction: column; /* Apila las opciones una debajo de otra */
+  align-items: center;    /* Centra los enlaces */
+  gap: 10px;             /* Separación entre cada enlace */
+  width: 100%;
+}
+
 nav a {
   color: white;
-  margin: 0 10px;
   text-decoration: none;
   font-weight: bold;
+  font-size: 1.1rem;
 }
 
 nav a:hover {
@@ -66,16 +75,11 @@ nav a:hover {
   }
 
   .logo {
-    width: 90px; /* Tamaño ideal para que no ocupe toda la pantalla del teléfono */
+    width: 90px;
   }
 
   header h1 {
     font-size: 1.4rem;
-  }
-
-  nav a {
-    display: block;
-    margin: 8px 0;
   }
 }
 
