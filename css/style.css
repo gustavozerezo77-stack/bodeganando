@@ -14,26 +14,37 @@ h1, h2, h3 {
   color: #7c2e20;
 }
 
+/* HEADER Y NAVEGACIÓN ADAPTABLES */
 header {
   background-color: #c65a43;
   color: white;
   padding: 20px;
   text-align: center;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Marca (Logo + Título) */
+.header-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  width: 120px; /* Tamaño adaptado para pantallas estándar */
+  height: auto;
+  mix-blend-mode: multiply;
+  object-fit: contain;
 }
 
 header h1 {
   color: white;
-  margin: 0 0 10px 0;
-}
-
-.logo {
-  width: 250px;
-  height: auto;
-  position: absolute;
-  left: 40px;
-  top: 20px;
-  mix-blend-mode: multiply;
+  margin: 0;
 }
 
 nav a {
@@ -47,6 +58,28 @@ nav a:hover {
   text-decoration: underline;
 }
 
+/* AJUSTE EXCLUSIVO PARA CELULARES */
+@media (max-width: 600px) {
+  .header-brand {
+    flex-direction: column; /* Pone el logo arriba y el título abajo */
+    gap: 10px;
+  }
+
+  .logo {
+    width: 90px; /* Tamaño ideal para que no ocupe toda la pantalla del teléfono */
+  }
+
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  nav a {
+    display: block;
+    margin: 8px 0;
+  }
+}
+
+/* SECCIONES Y CONTENIDO */
 section {
   padding: 40px 20px;
   max-width: 900px;
@@ -154,11 +187,4 @@ footer {
   color: white;
   text-align: center;
   padding: 15px;
-}
-
-@media (max-width: 600px) {
-  nav a {
-    display: block;
-    margin: 8px 0;
-  }
 }
