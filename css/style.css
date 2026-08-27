@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #2b2420;
+  background-color: #f2e8d5;
+  line-height: 1.5;
+}
+
+h1, h2, h3 {
+  color: #7c2e20;
+}
+
+header {
+  background-color: #c65a43;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+header h1 {
+  color: white;
+  margin: 0 0 10px 0;
+}
+
+.logo {
+  width: 250px;
+  height: auto;
+  position: absolute;
+  left: 40px;
+  top: 20px;
+  mix-blend-mode: multiply;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#inicio {
+  text-align: center;
+}
+
+#catalogo article {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+#catalogo img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.galeria-productos {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.boton-producto {
+  display: inline-block;
+  background-color: #25D366;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 6px;
+  margin: 15px 0;
+}
+
+.boton-producto:hover {
+  background-color: #1ebe57;
+}
+
+#contacto {
+  background-color: #a13d2b;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+}
+
+#contacto h2 {
+  color: white;
+}
+
+.boton-whatsapp {
+  display: inline-block;
+  background-color: #25D366;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 6px;
+  margin-top: 15px;
+}
+
+.boton-whatsapp:hover {
+  background-color: #1ebe57;
+}
+
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.redes-sociales a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.redes-sociales i {
+  font-size: 24px;
+  margin-right: 5px;
+}
+
+.redes-sociales a:hover {
+  color: #2b2420;
+}
+
+footer {
+  background-color: #2b2420;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+@media (max-width: 600px) {
+  nav a {
+    display: block;
+    margin: 8px 0;
+  }
+}
