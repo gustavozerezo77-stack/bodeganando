@@ -26,7 +26,6 @@ header {
   gap: 15px;
 }
 
-/* Marca (Logo + Título) */
 .header-brand {
   display: flex;
   align-items: center;
@@ -40,6 +39,8 @@ header {
   height: auto;
   mix-blend-mode: multiply;
   object-fit: contain;
+  display: block;
+  margin: 0 auto;
 }
 
 header h1 {
@@ -47,37 +48,40 @@ header h1 {
   margin: 0;
 }
 
-/* MENÚ EN LÍNEA HORIZONTAL */
+/* FORZAR MENÚ HORIZONTAL (EN UNA SOLA LÍNEA) */
 nav {
-  display: flex;
-  flex-direction: row;     /* Los coloca uno al lado del otro */
-  justify-content: center; /* Centra el menú horizontalmente */
-  flex-wrap: wrap;         /* Evita que se salgan si la pantalla es muy chica */
-  gap: 12px;               /* Espacio entre cada palabra */
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-wrap: nowrap !important;
+  gap: 12px !important;
   width: 100%;
 }
 
 nav a {
-  color: white;
+  color: white !important;
   text-decoration: none;
   font-weight: bold;
-  font-size: 0.95rem;      /* Tamaño cómodo para entrar en una sola línea */
-  white-space: nowrap;
+  font-size: 0.9rem !important;
+  display: inline-block !important;
+  white-space: nowrap !important;
+  margin: 0 !important;
 }
 
 nav a:hover {
   text-decoration: underline;
 }
 
-/* AJUSTES PARA PANTALLAS PEQUEÑAS (CELULARES) */
+/* AJUSTES PARA CELULAR */
 @media (max-width: 600px) {
   .header-brand {
-    flex-direction: column; /* Pone el logo arriba y el título abajo */
+    flex-direction: column;
     gap: 8px;
   }
 
   .logo {
-    width: 85px; /* Tamaño ideal del logo para celular */
+    width: 85px;
   }
 
   header h1 {
@@ -85,11 +89,11 @@ nav a:hover {
   }
 
   nav {
-    gap: 10px; /* Ajusta el espacio entre enlaces en teléfonos */
+    gap: 8px !important;
   }
 
   nav a {
-    font-size: 0.9rem;
+    font-size: 0.8rem !important; /* Letra un poco más pequeña para entrar exacto de lado a lado */
   }
 }
 
