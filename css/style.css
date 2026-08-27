@@ -14,11 +14,11 @@ h1, h2, h3 {
   color: #7c2e20;
 }
 
-/* HEADER Y NAVEGACIÓN ADAPTABLES */
+/* HEADER Y NAVEGACIÓN */
 header {
   background-color: #c65a43;
   color: white;
-  padding: 20px;
+  padding: 20px 10px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -31,12 +31,12 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 15px;
   flex-wrap: wrap;
 }
 
 .logo {
-  width: 120px;
+  width: 100px;
   height: auto;
   mix-blend-mode: multiply;
   object-fit: contain;
@@ -47,12 +47,13 @@ header h1 {
   margin: 0;
 }
 
-/* MENÚ EN NAVEGACIÓN VERTICAL */
+/* MENÚ EN LÍNEA HORIZONTAL */
 nav {
   display: flex;
-  flex-direction: column; /* Apila las opciones una debajo de otra */
-  align-items: center;    /* Centra los enlaces */
-  gap: 10px;             /* Separación entre cada enlace */
+  flex-direction: row;     /* Los coloca uno al lado del otro */
+  justify-content: center; /* Centra el menú horizontalmente */
+  flex-wrap: wrap;         /* Evita que se salgan si la pantalla es muy chica */
+  gap: 12px;               /* Espacio entre cada palabra */
   width: 100%;
 }
 
@@ -60,26 +61,35 @@ nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 0.95rem;      /* Tamaño cómodo para entrar en una sola línea */
+  white-space: nowrap;
 }
 
 nav a:hover {
   text-decoration: underline;
 }
 
-/* AJUSTE EXCLUSIVO PARA CELULARES */
+/* AJUSTES PARA PANTALLAS PEQUEÑAS (CELULARES) */
 @media (max-width: 600px) {
   .header-brand {
     flex-direction: column; /* Pone el logo arriba y el título abajo */
-    gap: 10px;
+    gap: 8px;
   }
 
   .logo {
-    width: 90px;
+    width: 85px; /* Tamaño ideal del logo para celular */
   }
 
   header h1 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+  }
+
+  nav {
+    gap: 10px; /* Ajusta el espacio entre enlaces en teléfonos */
+  }
+
+  nav a {
+    font-size: 0.9rem;
   }
 }
 
